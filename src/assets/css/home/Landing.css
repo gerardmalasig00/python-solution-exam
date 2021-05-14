@@ -1,0 +1,61 @@
+#landing {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(320deg, rgb(0 0 0), rgb(0 58 113 / 35%) 10%, rgb(0 0 0)), 
+    url('../../images/landing-bg.jpeg')no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#landing .container {
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
+}
+
+#landing .container .content {
+    width: 50%;
+}
+
+#landing .container .content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#landing .container .content p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: rgb(233, 233, 233);
+    margin-bottom: 5rem;
+}
+
+#landing .container .content button {
+    background: linear-gradient(to left, transparent 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: bottom right;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: 2px solid #9e1200;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+#landing .container .content button:hover {
+    background-position: bottom left;
+    border: 2px solid white;
+    color: black;
+}
+
+/* Tablet */
+@media only screen and (max-width: 1100px)  {
+    #landing .container .content {
+        width: 100%;
+        text-align: center;
+    }
+}

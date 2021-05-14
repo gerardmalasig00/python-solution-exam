@@ -1,0 +1,51 @@
+#solution {
+    background: #9e1200;
+    color: white;
+}
+
+#solution .header {
+    text-align: center;
+}
+
+#solution .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+#solution .card-grid .card {
+    background: white;
+    color: rgb(29, 29, 29);
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#solution .card-grid .card:hover {
+    background: #d61a01;
+    color: white;
+}
+
+#solution .card-grid .card:hover div span {
+    transform: rotate(310deg);
+    color: white;
+}
+
+#solution .card-grid .card h3 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+#solution .card-grid .card span {
+    font-size: 2.3rem;
+    font-weight: bold;
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    color: #9e1200;
+    transition: all .5s ease-in-out;
+}
+

@@ -1,0 +1,130 @@
+#offer {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    display: grid;
+    place-items: center;
+}
+
+#offer .header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#offer .selection {
+    width: 80%;
+    margin: 3rem auto;
+    text-align: center;
+    display: flex;
+}
+
+#offer .selection button {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    font-size: clamp(12px, .5vw, 1rem);
+    font-weight: bold; 
+    text-transform: uppercase; 
+    position: relative;
+    padding: 1em 0; 
+    cursor: pointer;
+}
+
+#offer .selection button::after {
+    content: '';
+    background: #bbbbbb;
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(0.5, 1);
+    transform-origin: 50% 100%;
+    transition: all .5s ease;
+}
+
+#offer .selection button:hover::after {
+    background: #c3c3c3;
+    transform: scale(1, 1);
+}
+
+#offer .selection button.active::after {
+    transform: scale(1, 1);
+    background: #9e1200;
+}
+
+#offer .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    background: transparent;
+    box-shadow: 0 20px 20px rgb(0 0 0 / 15%);
+    margin: 5rem 0;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    
+}
+
+
+#offer .card-grid.show{
+    animation: popout .5s forwards linear;
+}
+
+@keyframes popout {
+    to {transform: scale(1, 1); }
+}
+
+#offer .card-grid .card {
+    width: 100%;
+    padding: 2rem 1rem;
+    border: 2px solid #fafafa;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr 1fr 20%;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(0.45, 0.05, 0.55, 0.95);;
+    
+}
+
+#offer .card-grid.show div:nth-child(1) {
+    border-radius: 15px 0 0 0;
+}
+
+#offer .card-grid.show div:nth-child(3) {
+    border-radius: 0 15px 0 0;
+}
+
+#offer .card-grid.show div:nth-child(4) {
+    border-radius: 0 0 0 15px;
+}
+
+#offer .card-grid.show div:nth-child(6) {
+    border-radius: 0 0 15px 0; 
+}
+
+#offer .card-grid .card:hover {
+    background: #9e1200;
+    color: white;
+}
+
+
+#offer .card-grid .card span {
+    grid-row: 1/4;
+    align-self: center;
+    justify-self: center;
+}
+
+#offer .card-grid .card button {
+    background: transparent;
+    border: 0;
+    text-align: left;
+    align-self: end;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#offer .card-grid .card button:hover {
+    color: rgba(255, 255, 255, 0.561);
+}
